@@ -6,4 +6,4 @@ Front end source code for my TCAL 2019 workshop, **Build a Front End! Build a Ba
 
 - [Back end source code](https://github.com/brianzelip/modern-web-back-end)
 
-- [workshop material](https://github.com/brianzelip/modern-web-workshop).
+- [workshop material](https://github.com/brianzelip/modern-web-workshop)
