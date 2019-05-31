@@ -1,3 +1,3 @@
 <template lang="pug">
-  h1.white.center Modern Web Workshop Front End
+  h1.yellow.center Modern Web Workshop Front End
 </template>
