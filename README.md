@@ -13,9 +13,9 @@ Front end source code for my TCAL 2019 workshop, **Build a Front End! Build a Ba
 - vuejs front end
 - render out swapi data as pretty list
 - allow user to select which swapi data they want to render
-  - people
   - films
+  - people
+  - planets
+  - species
   - starships
   - vehicles
-  - species
-  - planets
