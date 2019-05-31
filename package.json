@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/brianzelip/modern-web-front-end/issues"
   },
-  "homepage": "https://github.com/brianzelip/modern-web-front-end#readme"
+  "homepage": "https://github.com/brianzelip/modern-web-front-end#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
+  }
 }
