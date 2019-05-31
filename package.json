@@ -21,10 +21,13 @@
   },
   "homepage": "https://github.com/brianzelip/modern-web-front-end#readme",
   "devDependencies": {
-    "parcel-bundler": "^1.12.3"
+    "@vue/component-compiler-utils": "^3.0.0",
+    "parcel-bundler": "^1.12.3",
+    "vue-template-compiler": "^2.6.10"
   },
   "dependencies": {
     "palette.css": "^0.3.4",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.3"
   }
 }
