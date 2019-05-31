@@ -1,9 +1,12 @@
 {
   "name": "modern-web-front-end",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Front end source code for the TCAL 2019 workshop, Build a Front End! Build a Back End!: A guided hands-on tour of modern web development tools and concepts.",
   "main": "src/index.html",
-  "scripts": {},
+  "scripts": {
+    "start": "parcel src/index.html",
+    "build": "rm -rf dist .cache && parcel build src/index.html"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/brianzelip/modern-web-front-end"
@@ -17,5 +20,16 @@
   "bugs": {
     "url": "https://github.com/brianzelip/modern-web-front-end/issues"
   },
-  "homepage": "https://github.com/brianzelip/modern-web-front-end#readme"
+  "homepage": "https://github.com/brianzelip/modern-web-front-end#readme",
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.0.0",
+    "parcel-bundler": "^1.12.3",
+    "pug": "^2.0.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "dependencies": {
+    "palette.css": "^0.3.4",
+    "vue": "^2.6.10",
+    "vue-hot-reload-api": "^2.3.3"
+  }
 }
