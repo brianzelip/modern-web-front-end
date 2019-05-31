@@ -12,9 +12,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - branch: vue-init
 
-### TODO
+### Added
 
-- install deps
+- scaffold out new vue project
   - vue
   - parcel
   - palette.css
+- Sketch out general direction via App and TheHeader components
