@@ -1,3 +1,12 @@
 <template>
-  <h1>Modern Web Workshop Front End</h1>
+  <TheHeader></TheHeader>
 </template>
+
+<script>
+import TheHeader from "./TheHeader.vue";
+export default {
+  components: {
+    TheHeader
+  }
+};
+</script>
