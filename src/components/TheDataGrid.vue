@@ -1,24 +1,27 @@
 <template>
-  <ol class="list-reset container grid-container">
-    <li
-      class="grid-item"
-      v-bind:key="index"
-      v-for="(entry, index) in data"
-    >
-      <section class="flex flex-column px2">
-        <h1>entry.title</h1>
-        <figure>
-          <img
-            alt="entry.imageDescription"
-            entry.imgUrl
-            src
-          >
-          <caption>entry.imageCaption</caption>
-        </figure>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut iure quisquam, exercitationem et dignissimos distinctio porro sint pariatur inventore, enim voluptate nobis expedita voluptatum culpa illum reiciendis error eum.</p>
-      </section>
-    </li>
-  </ol>
+  <section class="container">
+    <h2 class="white">Planets</h2>
+    <ol class="list-reset grid-container">
+      <li
+        class="grid-item"
+        v-bind:key="index"
+        v-for="(entry, index) in data"
+      >
+        <section class="flex flex-column px2">
+          <h1>entry.title</h1>
+          <figure>
+            <img
+              alt="entry.imageDescription"
+              entry.imgUrl
+              src
+            >
+            <caption>entry.imageCaption</caption>
+          </figure>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut iure quisquam, exercitationem et dignissimos distinctio porro sint pariatur inventore, enim voluptate nobis expedita voluptatum culpa illum reiciendis error eum.</p>
+        </section>
+      </li>
+    </ol>
+  </section>
 </template>
 
 <script>
