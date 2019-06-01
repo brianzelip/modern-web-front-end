@@ -1,12 +1,17 @@
 <template lang="pug">
-  TheHeader
+  div
+    TheHeader
+    TheDataGrid
 </template>
 
 <script>
 import TheHeader from "./TheHeader.vue";
+import TheDataGrid from "./TheDataGrid.vue";
+
 export default {
   components: {
-    TheHeader
+    TheHeader,
+    TheDataGrid
   }
 };
 </script>
