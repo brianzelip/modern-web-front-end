@@ -1,7 +1,6 @@
 <template lang="pug">
   div
     TheHeader
-    h2.container.white Planets
     TheDataGrid
 </template>
 
