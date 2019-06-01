@@ -2,25 +2,25 @@
   header.flex.justify-space-between.container.py2
     h1.h3.m0.py2.yellow {{ siteName }}
     ul.mb0.list-reset.flex.flex-center.yellow
-      li
-        button.btn.regular films
-      li
-        button.btn.regular people
-      li
-        button.btn.regular.active planets
-      li
-        button.btn.regular species
-      li
-        button.btn.regular starships
-      li
-        button.btn.regular vehicles
+      li(v-for="(resource, index) in swapiResources" :key="index")
+        button.btn.regular(@click="updateSelectedResource($event)") {{ resource }}
 </template>
 
 <script>
 export default {
   data() {
     return {
-      siteName: "Star Wars data catalog"
+      siteName: "Star Wars data catalog",
+      swapiResources: [
+        "films",
+        "people",
+        "planets",
+        "species",
+        "starships",
+        "vehicles"
+      ],
+      selectedResource: "",
+      activeTarget: null
     };
   }
 };
