@@ -5,7 +5,7 @@
       v-bind:key="index"
       v-for="(entry, index) in data"
     >
-      <section class="flex flex-column">
+      <section class="flex flex-column px2">
         <h1>entry.title</h1>
         <figure>
           <img
@@ -15,7 +15,7 @@
           >
           <caption>entry.imageCaption</caption>
         </figure>
-        <p>entry.description</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut iure quisquam, exercitationem et dignissimos distinctio porro sint pariatur inventore, enim voluptate nobis expedita voluptatum culpa illum reiciendis error eum.</p>
       </section>
     </li>
   </ol>
@@ -38,8 +38,9 @@ export default {
   grid-template-columns: auto auto auto;
   grid-gap: 1rem;
 }
+
 .grid-item {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.6);
   border: 1px solid white;
   border-radius: 0.5rem;
   height: 68vh;
