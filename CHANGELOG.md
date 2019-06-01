@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### TODO
 
 - Figure out if getting only the first page of swapi data images is doable and good enough
+- This requires updating the back end to accept params sent from front end, see [modern-web-back-end/issues/3](https://github.com/brianzelip/modern-web-back-end/issues/3)
 
 ## [0.3.0] - 2019-06-01
 
