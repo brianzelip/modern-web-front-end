@@ -6,15 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-## [0.3.0] - 2019-05-31
+## [0.3.0] - 2019-03-01
 
 ### Meta
 
 - branch: mockup-list
 
-### TODO
+### Added
 
-- Make vue components that mockup what the real data will look like
+- TheDataGrid.vue, which renders out data using CSS Grid, template for loops, component data, and hardcoded mockup data
+- TheHeader.vue: hardcoded active state to show connection between the resource type selected by the user and the rendering of that data
 
 ## [0.2.0] - 2019-05-31
 
