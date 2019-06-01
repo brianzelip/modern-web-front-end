@@ -22,6 +22,23 @@ export default {
       selectedResource: "",
       activeTarget: null
     };
+  },
+  methods: {
+    updateSelectedResource(e) {
+      // remove .active from old activeTarget if it exists
+      if (this.activeTarget) {
+        this.activeTarget.classList.remove("active");
+      }
+
+      // add .active to event target
+      e.target.classList.add("active");
+
+      // set new activeTarget to event target
+      this.$set(this, "activeTarget", e.target);
+
+      // set selectedResource to event target innerText
+      this.$set(this, "selectedResource", e.target.innerText);
+    }
   }
 };
 </script>
