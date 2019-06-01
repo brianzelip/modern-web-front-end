@@ -6,7 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-## [0.3.0] - 2019-03-01
+## [0.4.0] - 2019-06-01
+
+### Meta
+
+- branch: images-via-wiki
+
+### TODO
+
+- Figure out if getting only the first page of swapi data images is doable and good enough
+
+## [0.3.0] - 2019-06-01
 
 ### Meta
 
