@@ -7,7 +7,7 @@
       li
         button.btn.regular people
       li
-        button.btn.regular planets
+        button.btn.regular.active planets
       li
         button.btn.regular species
       li
@@ -43,6 +43,11 @@ li:last-child {
 .btn:hover {
   background-color: rgba(255, 255, 255, 0.3);
   cursor: default;
+}
+
+.active,
+.active:hover {
+  background-color: white;
 }
 </style>
 
