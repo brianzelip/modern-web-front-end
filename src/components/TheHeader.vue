@@ -1,9 +1,17 @@
 <template lang="pug">
   header.flex.justify-space-between.container.py2
     h1.h3.m0.py2.yellow {{ siteName }}
-    ul.mb0.list-reset.flex.flex-center.yellow
-      li(v-for="(resource, index) in swapiResources" :key="index")
-        button.btn.regular(@click="updateSelectedResource($event)") {{ resource }}
+    form#resource-selectors
+      ul.list-reset.mb0.flex.flex-center.yellow
+        li(v-for="(resource, index) in swapiResources" :key="index")
+          input(
+            type="radio"
+            :id="`radio-${resource}`"
+            name="resource" :value="resource"
+            v-model="selectedResource")
+          label.btn.regular(
+            :for="`radio-${resource}`"
+            @click="updateSelectedResource") {{ resource}}
 </template>
 
 <script>
@@ -25,19 +33,19 @@ export default {
   },
   methods: {
     updateSelectedResource(e) {
-      // remove .active from old activeTarget if it exists
+      // remove .active from old `this.activeTarget` if it exists
       if (this.activeTarget) {
         this.activeTarget.classList.remove("active");
       }
 
-      // add .active to event target
+      // add .active to the clicked element
       e.target.classList.add("active");
 
-      // set new activeTarget to event target
+      // set new `this.activeTarget` to the clicked element
       this.$set(this, "activeTarget", e.target);
 
-      // set selectedResource to event target innerText
-      this.$set(this, "selectedResource", e.target.innerText);
+      // set `this.selectedResource` to the clicked element's content
+      this.$set(this, "selectedResource", e.target.textContent);
     }
   }
 };
@@ -51,6 +59,11 @@ li {
 
 li:last-child {
   margin-right: 0;
+}
+
+input {
+  position: absolute;
+  opacity: 0;
 }
 
 .btn {
@@ -67,4 +80,3 @@ li:last-child {
   background-color: white;
 }
 </style>
-
