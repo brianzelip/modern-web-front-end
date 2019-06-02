@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     TheHeader(v-on:resource-update="getData")
-    TheDataGrid(:swapiData="swapiPayload.results")
+    TheDataGrid(:resourceTitle="resourceTitle" :swapiData="swapiPayload.results")
 </template>
 
 <script>
@@ -14,6 +14,7 @@ export default {
   data() {
     return {
       url: "http://localhost:2600/swapi/",
+      resourceTitle: "",
       swapiPayload: {}
     };
   },
@@ -23,6 +24,9 @@ export default {
   },
   methods: {
     getData(resource) {
+      const title = `${resource[0].toUpperCase()}${resource.slice(1)}`;
+      this.$set(this, "resourceTitle", title);
+
       axios
         .get(`${this.url}${resource}`)
         .then(response => {

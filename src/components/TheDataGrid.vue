@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <h2 class="white">Planets</h2>
+    <h2 class="white">{{ resourceTitle }}</h2>
     <ol class="list-reset grid-container">
       <li
         class="grid-item"
@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  props: ["swapiData"]
+  props: ["resourceTitle", "swapiData"]
 };
 </script>
 
