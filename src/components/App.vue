@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     TheHeader(v-on:resource-update="getData")
-    TheDataGrid
+    TheDataGrid(:data="swapiPayload.results || []")
 </template>
 
 <script>
