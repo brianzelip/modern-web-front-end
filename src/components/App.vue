@@ -11,7 +11,8 @@ import TheDataGrid from "./TheDataGrid.vue";
 export default {
   data() {
     return {
-      url: "hello"
+      url: "http://localhost:2600/swapi/",
+      swapiPayload: {}
     };
   },
   components: {
@@ -20,7 +21,10 @@ export default {
   },
   methods: {
     getData(payload) {
-      console.log("custom event communication is wired up!", payload);
+      console.log(
+        "custom event communication is wired up!",
+        `${this.url}${payload}`
+      );
     }
   }
 };
