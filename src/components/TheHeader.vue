@@ -46,6 +46,9 @@ export default {
 
       // set `this.selectedResource` to the clicked element's content
       this.$set(this, "selectedResource", e.target.textContent);
+
+      // tell App.vue the selected resource has changed
+      this.$emit("resource-update", this.selectedResource);
     }
   }
 };
