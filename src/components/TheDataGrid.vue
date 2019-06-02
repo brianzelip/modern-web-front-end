@@ -5,7 +5,7 @@
       <li
         class="grid-item"
         v-bind:key="index"
-        v-for="(entry, index) in data"
+        v-for="(entry, index) in swapiData"
       >
         <section class="flex flex-column px2">
           <h1>entry.title</h1>
@@ -21,20 +21,11 @@
         </section>
       </li>
     </ol>
-    <hr>
-    <hr>
-    <hr>
-    <pre class="white"><code>{{ swapiData }}</code></pre>
   </section>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      data: 3
-    };
-  },
   props: ["swapiData"]
 };
 </script>
