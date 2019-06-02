@@ -12,12 +12,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - branch: render-user-selected-swapi-data
 
+### Added
+
+- src/components/\*: custom events from user input starting at TheHeader
+- axios dependency
+- TheHeader: added form into the markup
+- TheHeader: made inputs in markup hidden via `position: absolute` and `opacity: 0`
+- TheDataGrid: removes hardcoded data
+
+```
+TheHeader.vue --> App.vue --> TheDataGrid.vue
+```
+
 ### TODO
 
-- This requires updating the back end to accept params sent from front end, see [modern-web-back-end/issues/3](https://github.com/brianzelip/modern-web-back-end/issues/3)
-- send :resource param when user clicks a button in TheHeader.vue
-- render out swapi data received
 - later on when thinking about getting images from wikipedia, figure out if getting only the first page of swapi data images is doable and good enough
+
+### Related to another repo
+
+- This requires updating the back end to accept params sent from front end, see [modern-web-back-end/issues/3](https://github.com/brianzelip/modern-web-back-end/issues/3)
 
 ## [0.3.0] - 2019-06-01
 
