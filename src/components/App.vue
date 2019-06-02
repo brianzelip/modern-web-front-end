@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import axios from "axios";
+
 import TheHeader from "./TheHeader.vue";
 import TheDataGrid from "./TheDataGrid.vue";
 
@@ -20,11 +22,15 @@ export default {
     TheDataGrid
   },
   methods: {
-    getData(payload) {
-      console.log(
-        "custom event communication is wired up!",
-        `${this.url}${payload}`
-      );
+    getData(resource) {
+      axios
+        .get(`${this.url}${resource}`)
+        .then(response => {
+          this.$set(this.swapiPayload, "data", response.data);
+        })
+        .catch(error => {
+          console.log(error);
+        });
     }
   }
 };
