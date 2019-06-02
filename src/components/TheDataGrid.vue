@@ -21,6 +21,10 @@
         </section>
       </li>
     </ol>
+    <hr>
+    <hr>
+    <hr>
+    <pre class="white"><code>{{ swapiData }}</code></pre>
   </section>
 </template>
 
@@ -30,7 +34,8 @@ export default {
     return {
       data: 3
     };
-  }
+  },
+  props: ["swapiData"]
 };
 </script>
 
