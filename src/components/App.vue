@@ -1,7 +1,7 @@
 <template lang="pug">
   div
     TheHeader(v-on:resource-update="getData")
-    TheDataGrid(:data="swapiPayload.results || []")
+    TheDataGrid(:swapiData="swapiPayload.results")
 </template>
 
 <script>
@@ -26,7 +26,7 @@ export default {
       axios
         .get(`${this.url}${resource}`)
         .then(response => {
-          this.$set(this.swapiPayload, "data", response.data);
+          this.$set(this, "swapiPayload", response.data);
         })
         .catch(error => {
           console.log(error);
