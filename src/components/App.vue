@@ -13,7 +13,7 @@ import TheDataGrid from "./TheDataGrid.vue";
 export default {
   data() {
     return {
-      url: "http://localhost:2600/swapi/",
+      url: "https://modern-web-back-end.glitch.me/swapi/",
       resourceTitle: "",
       swapiPayload: {}
     };

@@ -6,7 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-## [0.4.0] - 2019-06-01
+## [0.5.0] - 2019-06-02
+
+### Meta
+
+- branch: glitch
+
+### Added
+
+- App.vue: Update url data prop
+
+## [0.4.0] - 2019-06-02
 
 ### Meta
 
