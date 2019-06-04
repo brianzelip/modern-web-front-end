@@ -2,6 +2,7 @@
   div
     TheHeader(v-on:resource-update="getData")
     TheDataGrid(:resourceTitle="resourceTitle" :swapiData="swapiPayload.results")
+    TheFooter
 </template>
 
 <script>
@@ -9,6 +10,7 @@ import axios from "axios";
 
 import TheHeader from "./TheHeader.vue";
 import TheDataGrid from "./TheDataGrid.vue";
+import TheFooter from "./TheFooter.vue";
 
 export default {
   data() {
@@ -20,7 +22,8 @@ export default {
   },
   components: {
     TheHeader,
-    TheDataGrid
+    TheDataGrid,
+    TheFooter
   },
   methods: {
     getData(resource) {
