@@ -9,6 +9,10 @@
   color: var(--star-wars-yellow);
 }
 
+.yellow-hover:hover {
+  color: var(--star-wars-yellow);
+}
+
 .justify-space-between {
   justify-content: space-between;
 }
