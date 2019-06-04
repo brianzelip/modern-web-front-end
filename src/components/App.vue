@@ -1,7 +1,7 @@
 <template lang="pug">
   div#app.vh100
     TheHeader(v-on:resource-update="getData")
-    TheLoadingSpinner.flex-grow.align-self-center
+    TheLoadingSpinner.flex-grow.align-self-center.flex.flex-column.justify-content-center
     TheDataGrid(class="flex-grow" :resourceTitle="resourceTitle" :swapiData="swapiPayload.results")
     TheFooter.pb2
 </template>
