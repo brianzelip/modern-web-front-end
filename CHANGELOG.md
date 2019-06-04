@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [0.6.0] - 2019-06-03
+
+### Meta
+
+- branch: add-footer
+
+### Added
+
+- src/components/TheFooter.vue: Add links to remote sources and deployments
+
 ## [0.5.0] - 2019-06-02
 
 ### Meta
