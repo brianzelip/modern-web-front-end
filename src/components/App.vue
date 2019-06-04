@@ -1,7 +1,8 @@
 <template lang="pug">
-  div
+  div#app.vh100
     TheHeader(v-on:resource-update="getData")
-    TheDataGrid(:resourceTitle="resourceTitle" :swapiData="swapiPayload.results")
+    TheDataGrid(class="flex-grow" :resourceTitle="resourceTitle" :swapiData="swapiPayload.results")
+    TheFooter.pb2
 </template>
 
 <script>
@@ -9,6 +10,7 @@ import axios from "axios";
 
 import TheHeader from "./TheHeader.vue";
 import TheDataGrid from "./TheDataGrid.vue";
+import TheFooter from "./TheFooter.vue";
 
 export default {
   data() {
@@ -20,7 +22,8 @@ export default {
   },
   components: {
     TheHeader,
-    TheDataGrid
+    TheDataGrid,
+    TheFooter
   },
   methods: {
     getData(resource) {
@@ -39,3 +42,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+#app {
+  display: flex;
+  flex-direction: column;
+}
+</style>

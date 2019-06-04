@@ -6,6 +6,38 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [0.6.0] - 2019-06-03
+
+### Meta
+
+- branch: add-footer
+
+### Added
+
+- src/components/TheFooter.vue: Add links to remote sources and deployments
+- main.css: Add styles
+- App.vue: Abstract the particular styles related to component layout into this parent component; this separates the layout-agnostic component from the app's layout design, thus allowing the developer to deal with the overall layout in one file view (App.vue), and deal with the more micro component layouts via each component. ie:
+
+```html
+<!-- old App.vue template -->
+<template lang="pug">
+  div#app
+    TheHeader(v-on:resource-update="getData")
+    TheDataGrid(resourceTitle="resourceTitle" :swapiData="swapiPayload.results")
+    TheFooter
+</template>
+```
+
+```html
+<!-- new App.vue template -->
+<template lang="pug">
+  div#app.vh100
+    TheHeader(v-on:resource-update="getData")
+    TheDataGrid(class="flex-grow" :resourceTitle="resourceTitle" :swapiData="swapiPayload.results")
+    TheFooter.pb2
+</template>
+```
+
 ## [0.5.0] - 2019-06-02
 
 ### Meta
