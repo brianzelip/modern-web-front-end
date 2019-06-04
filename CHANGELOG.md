@@ -14,7 +14,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Added
 
-- TheLoadingSpinner.vue
+- TheLoadingSpinner.vue: via [W3C loader demo](https://www.w3schools.com/howto/howto_css_loader.asp)
+- App.vue: Render TheLoadingSpinner component
 
 ## [0.6.1] - 2019-06-04
 
