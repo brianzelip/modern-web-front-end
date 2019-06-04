@@ -1,6 +1,7 @@
 <template lang="pug">
   div#app.vh100
     TheHeader(v-on:resource-update="getData")
+    TheLoadingSpinner.flex-grow
     TheDataGrid(class="flex-grow" :resourceTitle="resourceTitle" :swapiData="swapiPayload.results")
     TheFooter.pb2
 </template>
@@ -9,6 +10,7 @@
 import axios from "axios";
 
 import TheHeader from "./TheHeader.vue";
+import TheLoadingSpinner from "./TheLoadingSpinner.vue";
 import TheDataGrid from "./TheDataGrid.vue";
 import TheFooter from "./TheFooter.vue";
 
@@ -22,6 +24,7 @@ export default {
   },
   components: {
     TheHeader,
+    TheLoadingSpinner,
     TheDataGrid,
     TheFooter
   },
