@@ -1,5 +1,5 @@
 <template lang="pug">
-  div
+  div#app
     TheHeader(v-on:resource-update="getData")
     TheDataGrid(:resourceTitle="resourceTitle" :swapiData="swapiPayload.results")
     TheFooter
@@ -42,3 +42,10 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+#app {
+  display: flex;
+  flex-direction: column;
+}
+</style>
