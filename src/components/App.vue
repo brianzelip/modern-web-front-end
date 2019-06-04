@@ -1,8 +1,8 @@
 <template lang="pug">
-  div#app
+  div#app.vh100
     TheHeader(v-on:resource-update="getData")
-    TheDataGrid(:resourceTitle="resourceTitle" :swapiData="swapiPayload.results")
-    TheFooter
+    TheDataGrid(class="flex-grow" :resourceTitle="resourceTitle" :swapiData="swapiPayload.results")
+    TheFooter.pb2
 </template>
 
 <script>
