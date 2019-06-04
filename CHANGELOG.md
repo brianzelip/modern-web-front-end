@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [0.6.1] - 2019-06-04
+
+### Meta
+
+- branch: flex-item-data-grid-width
+
+### Added
+
+- TheDataGrid.vue: max-width of 100% via `.col-12` to force the size of the flex item
+
 ## [0.6.0] - 2019-06-03
 
 ### Meta
