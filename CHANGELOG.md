@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [0.7.0] - 2019-06-04
+
+### Meta
+
+- branch: loading-spinner
+
+### Added
+
+- TheLoadingSpinner.vue
+
 ## [0.6.1] - 2019-06-04
 
 ### Meta
