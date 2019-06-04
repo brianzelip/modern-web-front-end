@@ -5,6 +5,15 @@
   --star-wars-yellow: #cb8e14;
 }
 
+html {
+  height: 100vh;
+}
+
+body,
+.vh100 {
+  min-height: 100vh;
+}
+
 .yellow {
   color: var(--star-wars-yellow);
 }
@@ -15,4 +24,8 @@
 
 .justify-space-between {
   justify-content: space-between;
+}
+
+.align-self-center {
+  align-self: center;
 }
