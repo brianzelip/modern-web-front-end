@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container col-12">
     <h2 class="white">{{ resourceTitle }}</h2>
     <ol class="list-reset grid-container">
       <li
