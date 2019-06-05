@@ -2,6 +2,8 @@
   <div class="star-wars-intro">
     <!-- Blue Intro Text -->
     <p class="intro-text">A few weeks ago, in an academic health sciences library...</p>
+
+    <!-- All Scrolling Content Goes in here -->
     <div class="main-content">
       <div class="title-content">
         <p class="content-header">Select a data category above</p>
