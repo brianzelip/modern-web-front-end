@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Added
 
 - TheUserInstructions.vue
-- App.vue: Render TheUserInstructions.vue
+- App.vue: Render TheUserInstructions.vue conditionally
 
 ## [0.7.0] - 2019-06-05
 
