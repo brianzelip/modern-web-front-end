@@ -1,9 +1,12 @@
 <template lang="pug">
   div#app.vh100
     TheHeader(v-on:resource-update="getData")
-    TheLoadingSpinner.flex-grow.align-self-center.flex.flex-column.justify-content-center(v-if="showSpinner")
-    TheDataGrid(class="flex-grow" :resourceTitle="resourceTitle" :swapiData="swapiPayload.results" v-if="showDataGrid")
-    TheFooter.pb2
+
+    TheLoadingSpinner.align-self-center.flex.flex-column.justify-content-center(v-if="showSpinner")
+
+    TheDataGrid(:resourceTitle="resourceTitle" :swapiData="swapiPayload.results" v-if="showDataGrid")
+
+    TheFooter.flex-grow.flex.justify-content-center.align-items-end.pb2
 </template>
 
 <script>
