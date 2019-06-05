@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [0.8.0] - 2019-06-05
+
+### Meta
+
+- branch: user-instructions
+
+### Added
+
+- TheUserInstructions.vue
+- App.vue: Render TheUserInstructions.vue
+
 ## [0.7.0] - 2019-06-05
 
 ### Meta
