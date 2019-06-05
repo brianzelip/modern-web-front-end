@@ -1,6 +1,7 @@
 <template lang="pug">
   header.flex.justify-space-between.container.col-12.py2
-    h1.h3.m0.py2.yellow {{ siteName }}
+    a(href="/").yellow
+      h1.h3.m0.py2 {{ siteName }}
     form#resource-selectors
       ul.list-reset.mb0.flex.flex-center.yellow
         li(v-for="(resource, index) in swapiResources" :key="index")
