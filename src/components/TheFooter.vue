@@ -1,5 +1,5 @@
 <template lang="pug">
-  footer.align-self-center
+  footer
     a.white.yellow-hover(href="https://zelip.me") by bzelip
     | 
     span.yellow |
