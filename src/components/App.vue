@@ -2,7 +2,7 @@
   div#app.vh100
     TheHeader(v-on:resource-update="getData")
 
-    TheLoadingSpinner.align-self-center.flex.flex-column.justify-content-center(v-if="showSpinner")
+    TheLoadingSpinner.flex-grow.flex.flex-column.justify-content-center.align-items-center(v-if="showSpinner")
 
     TheDataGrid(:resourceTitle="resourceTitle" :swapiData="swapiPayload.results" v-if="showDataGrid")
 
