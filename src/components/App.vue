@@ -2,6 +2,8 @@
   div#app.vh100
     TheHeader(v-on:resource-update="getData")
 
+    TheUserInstructions.flex-grow.flex.justify-content-center.align-items-center(v-if="showInstructions")
+
     TheLoadingSpinner.flex-grow.flex.flex-column.justify-content-center.align-items-center(v-if="showSpinner")
 
     TheDataGrid(:resourceTitle="resourceTitle" :swapiData="swapiPayload.results" v-if="showDataGrid")
@@ -13,6 +15,7 @@
 import axios from "axios";
 
 import TheHeader from "./TheHeader.vue";
+import TheUserInstructions from "./TheUserInstructions.vue";
 import TheLoadingSpinner from "./TheLoadingSpinner.vue";
 import TheDataGrid from "./TheDataGrid.vue";
 import TheFooter from "./TheFooter.vue";
@@ -23,12 +26,14 @@ export default {
       url: "https://modern-web-back-end.glitch.me/swapi/",
       resourceTitle: "",
       swapiPayload: {},
+      showInstructions: true,
       showSpinner: false,
       showDataGrid: false
     };
   },
   components: {
     TheHeader,
+    TheUserInstructions,
     TheLoadingSpinner,
     TheDataGrid,
     TheFooter
@@ -37,6 +42,7 @@ export default {
     getData(resource) {
       const title = `${resource[0].toUpperCase()}${resource.slice(1)}`;
 
+      this.$set(this, "showInstructions", false);
       this.$set(this, "showDataGrid", false);
       this.$set(this, "showSpinner", true);
       axios
