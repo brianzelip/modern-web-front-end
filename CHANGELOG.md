@@ -6,6 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [0.7.0] - 2019-06-04
+
+### Meta
+
+- branch: loading-spinner
+
+### Added
+
+- TheLoadingSpinner.vue: via [W3C loader demo](https://www.w3schools.com/howto/howto_css_loader.asp)
+- App.vue:
+  - Render TheLoadingSpinner component
+  - Refactor use of .flex-push for sticky footer and spinner rendered closer to the center of the screen
+  - Refactor layout of TheFooter
+- TheFooter.vue: Refactor styles to keep it semantic and yet fight back against how display:flex ignores white space characters but not non-breaking space html entity
+
 ## [0.6.1] - 2019-06-04
 
 ### Meta
