@@ -16,6 +16,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 - TheStarWarsCrawl.vue: Adapt code from the excellent [StarWarsIntro.css](https://polarnotion.github.io/starwarsintro/)
 - App.vue: Render TheStarWarsCrawl in place of TheUserInstructions - maybe make this a little easter egg in the workshop, ie: have the crawl component in the file system, but star with the normal instructions first. then show how to load up a component, and see the change
+- TheHeader.vue: Make site name a link to reload the page
 
 ## [0.8.0] - 2019-06-05
 
