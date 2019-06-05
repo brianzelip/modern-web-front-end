@@ -1,8 +1,8 @@
 <template lang="pug">
   div#app.vh100
     TheHeader(v-on:resource-update="getData")
-    TheLoadingSpinner.flex-grow.align-self-center.flex.flex-column.justify-content-center(v-if="!dataHasLoaded")
-    TheDataGrid(class="flex-grow" :resourceTitle="resourceTitle" :swapiData="swapiPayload.results" v-if="dataHasLoaded")
+    TheLoadingSpinner.flex-grow.align-self-center.flex.flex-column.justify-content-center(v-if="showSpinner")
+    TheDataGrid(class="flex-grow" :resourceTitle="resourceTitle" :swapiData="swapiPayload.results" v-if="showDataGrid")
     TheFooter.pb2
 </template>
 
@@ -20,7 +20,8 @@ export default {
       url: "https://modern-web-back-end.glitch.me/swapi/",
       resourceTitle: "",
       swapiPayload: {},
-      dataHasLoaded: false
+      showSpinner: false,
+      showDataGrid: false
     };
   },
   components: {
@@ -32,14 +33,14 @@ export default {
   methods: {
     getData(resource) {
       const title = `${resource[0].toUpperCase()}${resource.slice(1)}`;
-      if (!this.dataHasLoaded) {
-        this.$set(this, "dataHasLoaded", false);
-      }
 
+      this.$set(this, "showDataGrid", false);
+      this.$set(this, "showSpinner", true);
       axios
         .get(`${this.url}${resource}`)
         .then(response => {
-          this.$set(this, "dataHasLoaded", true);
+          this.$set(this, "showSpinner", false);
+          this.$set(this, "showDataGrid", true);
           this.$set(this, "resourceTitle", title);
           this.$set(this, "swapiPayload", response.data);
         })
