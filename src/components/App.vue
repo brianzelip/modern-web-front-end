@@ -2,7 +2,9 @@
   div#app.vh100
     TheHeader(v-on:resource-update="getData")
 
-    TheUserInstructions.flex-grow.flex.justify-content-center.align-items-center(v-if="showInstructions")
+    //- TheUserInstructions.flex-grow.flex.justify-content-center.align-items-center(v-if="showInstructions")
+
+    TheStarWarsCrawl.flex-grow.container(v-if="showInstructions")
 
     TheLoadingSpinner.flex-grow.flex.flex-column.justify-content-center.align-items-center(v-if="showSpinner")
 
@@ -15,6 +17,7 @@
 import axios from "axios";
 
 import TheHeader from "./TheHeader.vue";
+import TheStarWarsCrawl from "./TheStarWarsCrawl.vue";
 import TheUserInstructions from "./TheUserInstructions.vue";
 import TheLoadingSpinner from "./TheLoadingSpinner.vue";
 import TheDataGrid from "./TheDataGrid.vue";
@@ -33,6 +36,7 @@ export default {
   },
   components: {
     TheHeader,
+    TheStarWarsCrawl,
     TheUserInstructions,
     TheLoadingSpinner,
     TheDataGrid,
