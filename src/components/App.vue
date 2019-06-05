@@ -10,7 +10,7 @@
 
     TheDataGrid(:resourceTitle="resourceTitle" :swapiData="swapiPayload.results" v-if="showDataGrid")
 
-    TheFooter.flex-grow.flex.justify-content-center.align-items-end.pb2
+    TheFooter.flex.justify-content-center.align-items-end.pb2
 </template>
 
 <script>
