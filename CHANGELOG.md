@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### TODO
 
 - TheDataGrid.vue: parse real data
-- Resource templates: either hardcode individual templates per resource, or figure out the automation logic
+- Resource templates: either hardcode individual templates per resource, or figure out the automation logic; **write each schema up as md files or json**
 
 ## [0.9.0] - 2019-06-05
 
