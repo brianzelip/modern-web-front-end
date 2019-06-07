@@ -26,7 +26,41 @@
 
 <script>
 export default {
-  props: ["resourceTitle", "swapiData"]
+  props: ["resourceTitle", "swapiData"],
+  resources: {
+    films: ["title", "opening_crawl", "director", "producer", "release_date"],
+    people: ["name", "birth_year", "homeworld", "films", "species"],
+    planets: ["name", "climate", "population", "residents", "films"],
+    species: [
+      "name",
+      "classification",
+      "average_lifespan",
+      "language",
+      "people",
+      "films"
+    ],
+    starships: [
+      "name",
+      "model",
+      "manufacturer",
+      "cost_in_credits",
+      "length",
+      "passengers",
+      "hyperdrive_rating",
+      "starship_class",
+      "films"
+    ],
+    vehicles: [
+      "name",
+      "model",
+      "manufacturer",
+      "cost_in_credits",
+      "length",
+      "passengers",
+      "vehicle_class",
+      "films"
+    ]
+  }
 };
 </script>
 
