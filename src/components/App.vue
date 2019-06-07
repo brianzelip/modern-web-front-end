@@ -2,9 +2,9 @@
   div#app.vh100
     TheHeader(v-on:resource-update="getData")
 
-    //- TheUserInstructions.flex-grow.flex.justify-content-center.align-items-center(v-if="showInstructions")
+    TheUserInstructions.flex-grow.flex.justify-content-center.align-items-center(v-if="showInstructions")
 
-    TheStarWarsCrawl.flex-grow.container(v-if="showInstructions")
+    //- TheStarWarsCrawl.flex-grow.container(v-if="showInstructions")
 
     TheLoadingSpinner.flex-grow.flex.flex-column.justify-content-center.align-items-center(v-if="showSpinner")
 
