@@ -1,4 +1,4 @@
-const swapi = {
+export const swapi = {
   films: 'https://swapi.co/api/films/',
   people: 'https://swapi.co/api/people/',
   planets: 'https://swapi.co/api/planets/',
@@ -7,7 +7,7 @@ const swapi = {
   vehicles: 'https://swapi.co/api/vehicles/'
 };
 
-const films = {
+export const films = {
   required: [
     'title',
     'episode_id',
@@ -25,7 +25,7 @@ const films = {
     'edited'
   ]
 };
-const people = {
+export const people = {
   required: [
     'name',
     'height',
@@ -45,7 +45,7 @@ const people = {
     'edited'
   ]
 };
-const planets = {
+export const planets = {
   required: [
     'name',
     'rotation_period',
@@ -63,7 +63,7 @@ const planets = {
     'url'
   ]
 };
-const species = {
+export const species = {
   required: [
     'name',
     'classification',
@@ -82,7 +82,7 @@ const species = {
     'edited'
   ]
 };
-const starships = {
+export const starships = {
   required: [
     'name',
     'model',
@@ -104,7 +104,7 @@ const starships = {
     'url'
   ]
 };
-const vehicles = {
+export const vehicles = {
   required: [
     'name',
     'model',
