@@ -7,7 +7,7 @@
         v-bind:key="index"
         v-for="(entry, index) in swapiData"
       >
-        <ResourcesFilm></ResourcesFilm>
+        <ResourcesFilm :data="entry"></ResourcesFilm>
       </li>
     </ol>
   </section>
