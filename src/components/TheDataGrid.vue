@@ -68,6 +68,5 @@ export default {
   background-color: rgba(255, 255, 255, 0.6);
   border: 1px solid white;
   border-radius: 0.5rem;
-  height: 68vh;
 }
 </style>
