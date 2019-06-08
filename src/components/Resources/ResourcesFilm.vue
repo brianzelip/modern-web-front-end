@@ -1,6 +1,6 @@
 <template lang="pug">
   article.flex.flex-column.px2
-    h1 entry.title
+    h1 {{ data.title }}
     figure
       img(alt="entry.imageDescription" entry.imgUrl)
       caption entry.imageCaption
