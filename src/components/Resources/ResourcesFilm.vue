@@ -10,9 +10,9 @@
     p
       span.bold Producer: 
       | {{ data.producer }}
-    figure
-      img(alt="entry.imageDescription" entry.imgUrl)
-      caption entry.imageCaption
+    //- figure
+    //-   img(alt="entry.imageDescription" entry.imgUrl)
+    //-   caption entry.imageCaption
     h2.h4 Opening crawl text:
     p {{ data.opening_crawl }}
 </template>
