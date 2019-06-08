@@ -7,7 +7,7 @@
         v-bind:key="index"
         v-for="(entry, index) in swapiData"
       >
-        <section class="flex flex-column px2">
+        <article class="flex flex-column px2">
           <h1>entry.title</h1>
           <figure>
             <img
@@ -18,7 +18,7 @@
             <caption>entry.imageCaption</caption>
           </figure>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut iure quisquam, exercitationem et dignissimos distinctio porro sint pariatur inventore, enim voluptate nobis expedita voluptatum culpa illum reiciendis error eum.</p>
-        </section>
+        </article>
       </li>
     </ol>
   </section>
