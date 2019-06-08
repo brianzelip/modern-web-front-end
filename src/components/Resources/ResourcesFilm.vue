@@ -8,7 +8,14 @@
 </template>
 
 <script>
-export default {};
+export default {
+  props: ["data"],
+  data() {
+    return {
+      attrs: ["title", "opening_crawl", "director", "producer", "release_date"]
+    };
+  }
+};
 </script>
 
 <style scoped>
