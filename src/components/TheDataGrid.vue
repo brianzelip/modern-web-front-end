@@ -7,26 +7,18 @@
         v-bind:key="index"
         v-for="(entry, index) in swapiData"
       >
-        <article class="flex flex-column px2">
-          <h1>entry.title</h1>
-          <figure>
-            <img
-              alt="entry.imageDescription"
-              entry.imgUrl
-              src
-            >
-            <caption>entry.imageCaption</caption>
-          </figure>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut iure quisquam, exercitationem et dignissimos distinctio porro sint pariatur inventore, enim voluptate nobis expedita voluptatum culpa illum reiciendis error eum.</p>
-        </article>
+        <ResourcesFilm></ResourcesFilm>
       </li>
     </ol>
   </section>
 </template>
 
 <script>
+import ResourcesFilm from "./Resources/ResourcesFilm.vue";
+
 export default {
   props: ["resourceTitle", "swapiData"],
+  components: { ResourcesFilm },
   resources: {
     films: ["title", "opening_crawl", "director", "producer", "release_date"],
     people: ["name", "birth_year", "homeworld", "films", "species"],
