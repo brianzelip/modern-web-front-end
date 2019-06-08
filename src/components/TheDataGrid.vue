@@ -7,7 +7,7 @@
         v-bind:key="index"
         v-for="(entry, index) in swapiData"
       >
-        <ResourcesFilm :data="entry"></ResourcesFilm>
+        <ResourcesPerson :data="entry"></ResourcesPerson>
       </li>
     </ol>
   </section>
@@ -15,10 +15,11 @@
 
 <script>
 import ResourcesFilm from "./Resources/ResourcesFilm.vue";
+import ResourcesPerson from "./Resources/ResourcesPerson.vue";
 
 export default {
   props: ["resourceTitle", "swapiData"],
-  components: { ResourcesFilm },
+  components: { ResourcesFilm, ResourcesPerson },
   resources: {
     films: ["title", "opening_crawl", "director", "producer", "release_date"],
     people: ["name", "birth_year", "homeworld", "films", "species"],
