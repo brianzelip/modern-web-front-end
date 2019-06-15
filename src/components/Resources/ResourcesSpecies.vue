@@ -2,15 +2,18 @@
   article.flex.flex-column.px2
     h1 {{ data.name }}
     p
-      span.bold Climate: 
-      | {{ data.climate }}    
+      span.bold Classification: 
+      | {{ data.classification }}    
     p
-      span.bold Population: 
-      | {{ data.population }}
+      span.bold Average lifespan: 
+      | {{ data.average_lifespan }}
     p
-      span.bold Residents: 
+      span.bold Language: 
+      | {{ data.language }}
+    p
+      span.bold People: 
       ul
-        li(v-for="(resident, index) in data.residents" :key="index") {{ resident }}
+        li(v-for="(person, index) in data.people" :key="index") {{ person }}
     p
       span.bold Films: 
       ul
