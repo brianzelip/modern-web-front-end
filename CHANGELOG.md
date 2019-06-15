@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [0.10.1] - 2019-06-16
+
+### Meta
+
+- branch: update-data-fetch
+- reason: Update the GET request to get swapi data served locally from the back end
+
+### Updated
+
+- App.vue:
+  - change url data property
+  - clean up getData() method
+
 ## [0.10.0] - 2019-06-15
 
 ### Meta

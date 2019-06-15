@@ -26,7 +26,7 @@ import TheFooter from "./TheFooter.vue";
 export default {
   data() {
     return {
-      url: "https://modern-web-back-end.glitch.me/swapi/",
+      url: "https://modern-web-back-end.glitch.me/get/",
       resource: "",
       swapiPayload: {},
       showInstructions: true,
@@ -44,11 +44,10 @@ export default {
   },
   methods: {
     getData(resource) {
-      const title = `${resource[0].toUpperCase()}${resource.slice(1)}`;
-
       this.$set(this, "showInstructions", false);
       this.$set(this, "showDataGrid", false);
       this.$set(this, "showSpinner", true);
+
       axios
         .get(`${this.url}${resource}`)
         .then(response => {
