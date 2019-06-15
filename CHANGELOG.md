@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
-## [0.10.0] - 2019-06-06
+## [0.10.0] - 2019-06-15
 
 ### Meta
 
@@ -14,10 +14,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### TODO
 
-- TheDataGrid.vue: parse real data
-- Resource templates: either hardcode individual templates per resource, or figure out the automation logic; **write each schema up as md files or json**
-  - going with handcoded individual templates, where the root el in each is `<article>`
-  - going with the idea of using dynamic slots in TheDataGrid's v-for `<li>`
+- src/components/Resources/\*.vue: create components for each of the 6 swapi resources; each resource renders different attributes, so that's why there are 6 components -- it was just easier/quicker this way.
+- TheDataGrid.vue: use dynamic components to render whichever resource type the user selects
+- models/resources.js: Notes to help think about what and how to render from swapi data
 
 ## [0.9.0] - 2019-06-05
 
