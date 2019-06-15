@@ -7,26 +7,50 @@
         v-bind:key="index"
         v-for="(entry, index) in swapiData"
       >
-        <section class="flex flex-column px2">
-          <h1>entry.title</h1>
-          <figure>
-            <img
-              alt="entry.imageDescription"
-              entry.imgUrl
-              src
-            >
-            <caption>entry.imageCaption</caption>
-          </figure>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis ut iure quisquam, exercitationem et dignissimos distinctio porro sint pariatur inventore, enim voluptate nobis expedita voluptatum culpa illum reiciendis error eum.</p>
-        </section>
+        <component
+          :data="entry"
+          :is="`Resources${resourceMap[`${resource}`]}`"
+        ></component>
       </li>
     </ol>
   </section>
 </template>
 
 <script>
+import ResourcesFilm from "./Resources/ResourcesFilm.vue";
+import ResourcesPerson from "./Resources/ResourcesPerson.vue";
+import ResourcesPlanet from "./Resources/ResourcesPlanet.vue";
+import ResourcesSpecies from "./Resources/ResourcesSpecies.vue";
+import ResourcesStarship from "./Resources/ResourcesStarship.vue";
+import ResourcesVehicle from "./Resources/ResourcesVehicle.vue";
+
 export default {
-  props: ["resourceTitle", "swapiData"]
+  props: ["resource", "swapiData"],
+  components: {
+    ResourcesFilm,
+    ResourcesPerson,
+    ResourcesPlanet,
+    ResourcesSpecies,
+    ResourcesStarship,
+    ResourcesVehicle
+  },
+  data() {
+    return {
+      resourceMap: {
+        films: "Film",
+        people: "Person",
+        planets: "Planet",
+        species: "Species",
+        starships: "Starship",
+        vehicles: "Vehicle"
+      }
+    };
+  },
+  computed: {
+    resourceTitle() {
+      return `${this.resource[0].toUpperCase()}${this.resource.slice(1)}`;
+    }
+  }
 };
 </script>
 
@@ -42,6 +66,5 @@ export default {
   background-color: rgba(255, 255, 255, 0.6);
   border: 1px solid white;
   border-radius: 0.5rem;
-  height: 68vh;
 }
 </style>
