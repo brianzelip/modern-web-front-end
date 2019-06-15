@@ -7,7 +7,10 @@
         v-bind:key="index"
         v-for="(entry, index) in swapiData"
       >
-        <ResourcesSpecies :data="entry"></ResourcesSpecies>
+        <component
+          :data="entry"
+          :is="`Resources${resourceMap[`${resource}`]}`"
+        ></component>
       </li>
     </ol>
   </section>
@@ -22,7 +25,7 @@ import ResourcesStarship from "./Resources/ResourcesStarship.vue";
 import ResourcesVehicle from "./Resources/ResourcesVehicle.vue";
 
 export default {
-  props: ["resourceTitle", "swapiData"],
+  props: ["resource", "swapiData"],
   components: {
     ResourcesFilm,
     ResourcesPerson,
@@ -31,39 +34,22 @@ export default {
     ResourcesStarship,
     ResourcesVehicle
   },
-  resources: {
-    films: ["title", "opening_crawl", "director", "producer", "release_date"],
-    people: ["name", "birth_year", "homeworld", "films", "species"],
-    planets: ["name", "climate", "population", "residents", "films"],
-    species: [
-      "name",
-      "classification",
-      "average_lifespan",
-      "language",
-      "people",
-      "films"
-    ],
-    starships: [
-      "name",
-      "model",
-      "manufacturer",
-      "cost_in_credits",
-      "length",
-      "passengers",
-      "hyperdrive_rating",
-      "starship_class",
-      "films"
-    ],
-    vehicles: [
-      "name",
-      "model",
-      "manufacturer",
-      "cost_in_credits",
-      "length",
-      "passengers",
-      "vehicle_class",
-      "films"
-    ]
+  data() {
+    return {
+      resourceMap: {
+        films: "Film",
+        people: "Person",
+        planets: "Planet",
+        species: "Species",
+        starships: "Starship",
+        vehicles: "Vehicle"
+      }
+    };
+  },
+  computed: {
+    resourceTitle() {
+      return `${this.resource[0].toUpperCase()}${this.resource.slice(1)}`;
+    }
   }
 };
 </script>
