@@ -6,6 +6,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 
+## [0.10.2] - 2019-06-18
+
+### Meta
+
+- branch: fieldset
+- reason: After reading the html spec on <main> and <div>, I looked into <fieldset>, and it seems to scratch the itch that I had about using the <form> element in TheHeader.vue.
+
+### Updated
+
+- TheHeader.vue:
+  - change markup to fieldset
+  - add legend for caption
+
 ## [0.10.1] - 2019-06-16
 
 ### Meta
