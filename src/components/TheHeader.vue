@@ -3,6 +3,7 @@
     a(href="/").yellow
       h1.h3.m0.py2 {{ siteName }}
     fieldset#resource-selectors.m0.p0.border-none
+      legend {{ legend }}
       ul.list-reset.mb0.flex.flex-center.yellow
         li(v-for="(resource, index) in swapiResources" :key="index")
           input(
@@ -20,6 +21,7 @@ export default {
   data() {
     return {
       siteName: "Star Wars data catalog",
+      legend: "Star Wars data categories",
       swapiResources: [
         "films",
         "people",
@@ -65,6 +67,7 @@ li:last-child {
   margin-right: 0;
 }
 
+legend,
 input {
   position: absolute;
   opacity: 0;
