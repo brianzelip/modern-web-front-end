@@ -2,7 +2,7 @@
   header.flex.justify-space-between.container.col-12.py2
     a(href="/").yellow
       h1.h3.m0.py2 {{ siteName }}
-    form#resource-selectors
+    fieldset#resource-selectors.m0.p0.border-none
       ul.list-reset.mb0.flex.flex-center.yellow
         li(v-for="(resource, index) in swapiResources" :key="index")
           input(
