@@ -23,12 +23,12 @@ export default {
       siteName: "Star Wars data catalog",
       legend: "Star Wars data categories",
       swapiResources: [
-        "films",
-        "people",
-        "planets",
-        "species",
-        "starships",
-        "vehicles"
+        // "films",
+        // "people",
+        // "planets",
+        // "species",
+        // "starships",
+        // "vehicles"
       ],
       selectedResource: "",
       activeTarget: null
