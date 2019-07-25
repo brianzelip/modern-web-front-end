@@ -4,8 +4,6 @@
 
     TheUserInstructions.flex-grow.flex.justify-content-center.align-items-center(v-if="showInstructions")
 
-    //- TheStarWarsCrawl.flex-grow.container(v-if="showInstructions")
-
     TheLoadingSpinner.flex-grow.flex.flex-column.justify-content-center.align-items-center(v-if="showSpinner")
 
     TheDataGrid(:resource="resource" :swapiData="swapiPayload.results" v-if="showDataGrid")
@@ -17,7 +15,6 @@
 import axios from "axios";
 
 import TheHeader from "./TheHeader.vue";
-import TheStarWarsCrawl from "./TheStarWarsCrawl.vue";
 import TheUserInstructions from "./TheUserInstructions.vue";
 import TheLoadingSpinner from "./TheLoadingSpinner.vue";
 import TheDataGrid from "./TheDataGrid.vue";
@@ -26,7 +23,7 @@ import TheFooter from "./TheFooter.vue";
 export default {
   data() {
     return {
-      url: "https://modern-web-back-end.glitch.me/get/",
+      // url: "https://modern-web-back-end.glitch.me/swapi/",
       resource: "",
       swapiPayload: {},
       showInstructions: true,
@@ -36,7 +33,6 @@ export default {
   },
   components: {
     TheHeader,
-    TheStarWarsCrawl,
     TheUserInstructions,
     TheLoadingSpinner,
     TheDataGrid,
