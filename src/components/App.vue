@@ -23,7 +23,7 @@ import TheFooter from "./TheFooter.vue";
 export default {
   data() {
     return {
-      url: "https://modern-web-back-end.glitch.me/get/",
+      url: "https://REPO-NAME.glitch.me/get/",
       resource: "",
       swapiPayload: {},
       showInstructions: true,
