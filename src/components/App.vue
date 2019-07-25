@@ -1,10 +1,9 @@
 <template lang="pug">
-
   div#app.vh100
     
     TheHeader
 
-    TheFooter.flex.justify-content-center.align-items-end.pb2
+    TheFooter
 
 </template>
 
@@ -13,7 +12,7 @@ import TheHeader from "./TheHeader.vue";
 import TheFooter from "./TheFooter.vue";
 
 export default {
-  components: {}
+  components: {TheHeader, TheFooter}
 };
 </script>
 
