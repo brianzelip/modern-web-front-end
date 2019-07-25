@@ -2,6 +2,9 @@
 dist
 .cache
 
+# Apple file system
+.DS_Store
+
 # Logs
 logs
 *.log
