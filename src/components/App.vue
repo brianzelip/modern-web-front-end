@@ -4,8 +4,8 @@
     <p>{{ message }}</p>
     <input v-model="message">
     
-    <!-- <hr>
-    <p>Reversed message: {{ reversedMessage }}</p> -->
+    <hr>
+    <p>Reversed message: {{ reversedMessage }}</p>
   
   </main>
 </template>
