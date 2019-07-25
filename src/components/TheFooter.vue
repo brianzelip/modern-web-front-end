@@ -1,16 +1,20 @@
 <template lang="pug">
-  footer
-    a.white.yellow-hover(href="https://zelip.me") by bzelip
+  footer.flex-grow.flex.justify-content-center.align-items-end.pb2
+    a.white.yellow-hover(href="https://wp.towson.edu/tcal/") {{ confHashTag }}
     |
     span.block.yellow &nbsp; | &nbsp;
     |
-    a.white.yellow-hover(href="https://github.com/brianzelip/modern-web-front-end") source code
-    |
-    span.yellow &nbsp; | &nbsp;
-    | 
-    a.white.yellow-hover(href="http://modern-web-back-end.glitch.me/") api
-    |
-    span.yellow &nbsp; | &nbsp;
-    |
-    a.white.yellow-hover(href="https://github.com/brianzelip/modern-web-back-end") api source code
+    a.white.yellow-hover(v-bind:href="sourceURL") source code
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      confHashTag: '#tcal2019',
+      sourceURL: 'https://github.com/USERNAME/modern-web-front-end'
+    }
+  }
+}
+</script>
+
