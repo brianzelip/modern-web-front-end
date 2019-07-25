@@ -12,7 +12,10 @@ import TheHeader from "./TheHeader.vue";
 import TheFooter from "./TheFooter.vue";
 
 export default {
-  components: {}
+  components: {
+    // TheHeader,
+    // TheFooter
+  }
 };
 </script>
 
